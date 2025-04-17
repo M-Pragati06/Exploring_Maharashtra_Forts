@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Shivneri Fort, the birthplace of Chhatrapati Shivaji Maharaj, a historic hill fortress in Maharashtra with rich history and architecture.">
+    <meta name="keywords" content="Shivneri Fort, Shivaji Maharaj birthplace, Maharashtra forts, Indian heritage sites, historical places in India">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <title>Shivneri Fort - Birthplace of Chhatrapati Shivaji Maharaj | Maharashtra</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-align: justify;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        body {
+            background-image: linear-gradient(
+                to right,
+                #C5FFF8 0%,
+                #5FBDFF 51%,
+                #C5FFF8 100%
+            );
+            line-height: 1.6;
+        }
+        
+        nav {
+            width: 100%;
+            height: auto;
+            min-height: 10vh;
+            background-color: #FF6C22;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        #google_element {
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            border-radius: 15px;
+            margin: 10px 0;
+        }
+        
+        nav .menu {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            margin: 10px 0;
+        }
+        
+        nav .menu a {
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin: 5px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        nav .menu a:hover {
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 5px;
+        }
+        
+        .heading {
+            font-weight: 900;
+            color: darkred;
+            font-size: 2.5rem;
+            font-family: 'Times New Roman', Times, serif;
+            transition: all 0.3s ease;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .heading:hover {
+            transform: scale(1.02);
+            cursor: pointer;
+        }
+        
+        .name {
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 70px;
+        }
+        
+        span {
+            font-family: "Josefin Sans", sans-serif;
+        }
+        
+        .img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 10px;
+            margin: 30px auto;
+            box-shadow: 10px 10px 30px 10px #183D3D;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .img:hover {
+            transform: scale(1.01);
+        }
+        
+        .raigad-img {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        
+        .history {
+            margin: 0 20px;
+            padding-top: 20px;
+        }
+
+        .history ul {
+            margin-left: 100px;
+        }
+        
+        .paragraph {
+            font-size: 1rem;
+            padding: 10px 20px;
+            line-height: 1.6;
+        }
+        
+        .map_info {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .map {
+            width: 90%;
+            max-width: 600px;
+            height: 300px;
+            border: 0;
+            margin: 20px auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .main_map {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        
+        ul a {
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: none;
+            color: mediumblue;
+            word-break: break-all;
+            transition: all 0.3s ease;
+        }
+        
+        ul a:hover {
+            color: darkblue;
+            text-decoration: underline;
+        }
+        
+        ul {
+            margin: 20px;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .map_list {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .map_list ul {
+            margin-left: 150px;
+        }
+        
+        .map_list h2 {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            color: darkmagenta;
+            margin: 20px 0;
+            font-size: 1.5rem;
+        }
+
+        /* Toggle button styles */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+            padding: 10px;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #FF6C22;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 999;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            background-color: #e55c1a;
+        }
+
+
+        /* Media Queries for different screen sizes */
+        @media (min-width: 768px) {
+            nav {
+                padding: 0 30px;
+                height: 10vh;
+            }
+
+            nav .menu {
+                width: 50%;
+                margin: 0;
+            }
+            
+            #google_element {
+                width: 30%;
+                margin: 0;
+            }
+            
+            .heading {
+                font-size: 3rem;
+            }
+            
+            .paragraph {
+                font-size: 1.1rem;
+                padding: 10px 40px;
+            }
+            
+            .img {
+                max-width: 70%; 
+            }
+
+            .map_info {
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 40px 20px;
+            }
+            
+            .map {
+                width: 45%;
+                margin: 0 20px;
+            }
+            
+            .map_list {
+                width: 45%;
+                margin: 0 20px;
+            }
+            
+            .map_list h2 {
+                text-align: left;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .img {
+                max-width: 600px;
+            }
+
+            .paragraph {
+                font-size: 1.2rem;
+                padding: 10px 60px;
+            }
+            
+            .heading {
+                font-size: 3.5rem;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .heading {
+                font-size: 2rem;
+            }
+
+            .history ul {
+                margin-left: 0 !important;
+            }
+
+            .history ul li {
+                font-size: 1rem;
+            }
+
+            .map_list ul {
+                margin-left: 10px;
+            }
+
+            .raigad-img {
+                height: 300px;
+            }
+            
+            nav .menu a {
+                width: 100%;
+                margin: 5px 0;
+            }
+            
+            .history span {
+                font-size: 2rem;
+            }
+            
+            .history text {
+                font-size: 1.5rem;
+            }
+
+            /* Mobile menu styles */
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                justify-content: end;
+            }
+
+            nav .menu {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+            }
+
+            nav .menu.active {
+                display: flex;
+            }
+
+            #google_element {
+                display: none;
+                width: 100%;
+            }
+
+            #google_element.active {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>    
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <div class="menu" id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="information.html">Go back</a>
+            </div>
+                
+            <div id="google_element" align="right"></div> 
+        </nav>
+
+        <div class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+
+        <section class="section">
+            <div class="name">
+                <u class="heading"><text class="heading">SHIVNERI FORT</text></u>
+            </div>
+            
+            <div class="history">
+                <span style="font-size:50px; font-weight: 700; color:#FF6C22; margin-left: 10px; ">|</span><text style="color: darkred; font-weight: 700; font-size: 35px;margin-left: 20px; font-family: 'Times New Roman', Times, serif; "><u style="font-family: 'Times New Roman', Times, serif;">Information</u> :</text>
+                <p class="paragraph" style="margin-top: 5px;">Shivneri Fort is the birthplace of Chhatrapati Shivaji Maharaj, the founder of the Maratha Empire. Located near Junnar in Pune district of Maharashtra, this 17th-century hill fort has great historical significance. The fort stands at an elevation of 3,500 feet above sea level and is known for its unique triangular shape and strong fortifications.</p><br>
+                <p class="paragraph">The fort was built during the reign of the Bahmani Sultanate and later came under the control of the Ahmadnagar Sultanate. Shivaji Maharaj was born here in 1630, and the fort contains several structures associated with his early life. The fort's design includes multiple gateways, bastions, and water reservoirs that showcase medieval military architecture.</p><br>
+                <p class="paragraph">Shivneri Fort is particularly famous for its seven gates, each with its own defensive mechanisms. The fort has two main water reservoirs - Ganga and Yamuna - which provided water throughout the year. The steep climb to the fort, while challenging, offers breathtaking views of the surrounding landscape.</p><br>
+                <p class="paragraph" style="margin-bottom: 50px;">Today, Shivneri Fort is a protected monument and a popular pilgrimage site for those who revere Shivaji Maharaj. The fort houses a temple dedicated to Goddess Shivai Devi, after whom Shivaji was named. The birthplace chamber of Shivaji Maharaj, known as 'Shivjanmasthan', is preserved within the fort premises.</p>
+            </div>
+            <div class="img">
+                <img class="raigad-img" src="shivneri/shivneri_4.jpg" alt="Shivneri Fort view showing the hilltop fortress">
+            </div>
+            
+            <div class="history">
+                <span style="font-size:50px; font-weight: 700; color:#FF6C22; margin-left: 10px; ">|</span><text style="color: darkred; font-weight: 700; font-size: 35px;margin-left: 20px;font-family: 'Times New Roman', Times, serif; "><u style="font-family: 'Times New Roman', Times, serif;">History and local lore</u> :</text>
+                <p class="paragraph" style="margin-top: 5px;">Shivneri Fort has a history dating back to at least the 13th century. The fort gained prominence when it was chosen by Jijabai, Shivaji's mother, as a safe place to deliver her child during turbulent times. According to legend, Jijabai prayed to the local deity Shivai Devi for a son who would liberate the land from foreign rule, and her prayers were answered with the birth of Shivaji.</p><br>
+                <p class="paragraph" style="margin-bottom: 20px;">The fort remained strategically important throughout the Maratha period. After Shivaji's birth, his family moved to Pune, but Shivneri continued to be a key military outpost. The British captured the fort in 1818 after the Third Anglo-Maratha War. Local lore tells of hidden treasure and secret tunnels within the fort, though none have been officially discovered.</p>
+            </div>
+            <div class="img">
+                <img class="raigad-img" src="shivneri/shivneri_2.jpeg" alt="View of Shivneri Fort's entrance and walls">
+            </div>
+            <div class="history">
+                <span style="font-size:50px; font-weight: 700; color:#FF6C22; margin-left: 10px; ">|</span><text style="color: darkred; font-weight: 700; font-size: 35px;margin-left: 20px; font-family: 'Times New Roman', Times, serif; "><u style="font-family: 'Times New Roman', Times, serif;">Things to look out</u> :</text>
+                <p class="paragraph" style="margin-top: 5px;">Shivneri Fort offers visitors a glimpse into Maratha history and medieval architecture. Here are the key highlights to explore:</p><br>
+                <ul style="margin-left: 100px;font-size: 20px;">
+                <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Shivai Devi Temple:</b> The temple dedicated to the fort's patron deity, after whom Shivaji was named. This is where Jijabai prayed for a son.</li><br>
+                <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Shivjanmasthan:</b> The birthplace chamber of Shivaji Maharaj, marked by a statue of infant Shivaji in his mother's arms.</li><br>
+                <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Seven Gates:</b> The fort has seven well-preserved gates - the Maha Darwaja, Ganesh Darwaja, and others - each with unique defensive features.</li><br>
+                <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Water Reservoirs:</b> The Ganga and Yamuna tanks that provided water to the fort throughout the year, showcasing ancient water management systems.</li><br>
+                <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Bastions and Walls:</b> The fort's impressive defensive structures offer panoramic views of the surrounding countryside.</li><br>
+                <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Ambarkhana:</b> The granaries that stored food supplies during sieges, demonstrating the fort's self-sufficiency.</li>
+            </div>
+            <div class="img">
+                <img  class="raigad-img" src="shivneri/shivneri_5.jpg" alt="Shivneri Fort's bastions and defensive structures">
+            </div>
+            <div class="history">
+                <span style="font-size:50px; font-weight: 700; color:#FF6C22; margin-left: 10px; ">|</span><text style="color: darkred; font-weight: 700; font-size: 35px;margin-left: 20px; font-family: 'Times New Roman', Times, serif; "><u style="font-family: 'Times New Roman', Times, serif;">Key facts</u> :</text>
+                <ul style="margin-left: 100px;font-size: 20px;">
+                <li style="font-family: 'Times New Roman', Times, serif; margin-top:5px;"> Built in the 13th century, with additions made in the 16th-17th centuries</li><br>
+                <li style="font-family: 'Times New Roman', Times, serif;"> Elevation: 3,500 feet (1,066 meters) above sea level</li><br>
+                <li style="font-family: 'Times New Roman', Times, serif;">Birthplace of Chhatrapati Shivaji Maharaj (born February 19, 1630)</li><br>
+                <li style="font-family: 'Times New Roman', Times, serif;">The fort has seven gates and multiple bastions</li><br>
+                <li style="font-family: 'Times New Roman', Times, serif;">Contains two perennial water reservoirs - Ganga and Yamuna</li><br>
+                <li style="font-family: 'Times New Roman', Times, serif;">Declared a protected monument by the Archaeological Survey of India</li><br>
+                </div>
+
+                <div class="history">
+                    <span style="font-size:50px; font-weight: 700; color:#FF6C22; margin-left: 10px; ">|</span><text style="color: darkred; font-weight: 700; font-size: 35px;margin-left: 20px; font-family: 'Times New Roman', Times, serif; "><u style="font-family: 'Times New Roman', Times, serif;">Nearby places</u> :</text>
+                    <p class="paragraph" style="margin-top: 5px;">While visiting Shivneri Fort, consider exploring these nearby attractions:</p><br>
+                    <div class="img">
+                        <img  class="raigad-img" src="shivneri/shivneri_11.jpg" alt="Panoramic view of Shivneri Fort and surrounding landscape">
+                    </div>
+                    <ul style="margin-left: 100px;font-size: 20px;margin-top: 50px;">
+                    <li style="font-family: 'Times New Roman', Times, serif; margin-top:5px;"><b style="font-family: 'Times New Roman', Times, serif;">Lenyadri Caves:</b> About 15 km away, these Buddhist cave temples date back to the 1st-3rd century CE and feature beautiful carvings.</li><br>
+                    <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Junnar Town:</b> The historic town at the base of the fort has several ancient temples and the famous Ganesh Lena cave temple.</li><br>
+                    <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Ozar:</b> Home to the Vigneshwara Temple, one of the eight Ashtavinayak temples dedicated to Lord Ganesha.</li><br>
+                    <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Harishchandragad:</b> A famous hill fort about 60 km away, known for its spectacular Konkan Kada cliff.</li><br>
+                    </div>
+                    
+                    <div class="history">
+                        <span style="font-size:50px; font-weight: 700; color:#FF6C22; margin-left: 10px; ">|</span><text style="color: darkred; font-weight: 700; font-size: 35px;margin-left: 20px; font-family: 'Times New Roman', Times, serif; "><u style="font-family: 'Times New Roman', Times, serif;">Fort Map and Famous Hotels</u> :</text>
+                    </div>
+                    <div class="map_info">
+                        <div class="map">
+                            <iframe class="main_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3789.4828135755124!2d73.43582037790854!3d18.233675433562667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be8283eb38b1ce5%3A0xfc31826ad34a5b70!2sRaigad%20Fort!5e0!3m2!1sen!2sin!4v1701454427188!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Maps location of Shivneri Fort"></iframe>
+                        </div>
+                        <div class="map_list">
+                            <h2 style="text-align:center; font-family: 'Times New Roman', Times, serif; color: darkmagenta;">Famous Hotels Near Shivneri Fort</h2>
+                            <ul style="font-size: 20px;margin-top: 30px;">
+                                <li style="margin-top:5px;"><a href="https://maps.app.goo.gl/g7zLHyizsZCfWn5y6"><text style="color:mediumblue;">Hotel Sai Krupa & Lodging</text></a></li><br>
+                                <li style="margin-top:5px;"><a href="https://maps.app.goo.gl/H8zS2RpoaqvYrK1Z8"><text style="color:mediumblue">Swarajya Nivas</text></a></li><br>
+                                <li style="margin-top:5px;"><a href="https://maps.app.goo.gl/J76PNJbjn8XA49Ky8"><text style="color:mediumblue">Raigad Upahargruh</text></a></li><br>
+                                <li style="margin-top:5px;"><a href="https://maps.app.goo.gl/2y7Pjogj6yP5MJUW7"><text style="color:mediumblue">Hotel Sai Prasad</text></a></li><br>
+                                <li style="margin-top:5px;"><a href="https://maps.app.goo.gl/h2yGCUTcxEjD4Ujs8"><text style="color:mediumblue">Davale Bungalow</text></a></li><br>
+                                <li style="margin-top:5px;"><a href="https://maps.app.goo.gl/uZ31WH2b93JcKpX37"><text style="color:mediumblue">Hotel Showrya</text></a></li><br>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <script>
+                    function loadGoogleTranslate() {
+                        new google.translate.TranslateElement('google_element');
+                    }
+
+                    // Toggle menu function
+                    document.getElementById('mobile-menu').addEventListener('click', function() {
+                        const menu = document.getElementById('nav-menu');
+                        const googleElement = document.getElementById('google_element');
+                        
+                        menu.classList.toggle('active');
+                        googleElement.classList.toggle('active');
+                    });
+
+                    // Back to top button functionality
+                    const backToTopButton = document.getElementById('backToTop');
+                    
+                    window.addEventListener('scroll', function() {
+                        if (window.pageYOffset > 300) {
+                            backToTopButton.classList.add('visible');
+                        } else {
+                            backToTopButton.classList.remove('visible');
+                        }
+                    });
+
+                    backToTopButton.addEventListener('click', function() {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    });
+
+                    // Smooth scrolling for all links
+                    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                        anchor.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        });
+                    });
+                </script>
+</body>
+</html>
